@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+offset = 0
+
+10.times do
+  endpoint = "http://services.wine.com/api/beta2/service.svc/JSON/catalog?size=100&offset="
+  endpoint += offset.to_s
+  endpoint += "&apikey=#{ENV['API_KEY']}"
+  product_list = JSON.parse(RestClient.get endpoint)
+  list = product_list['Products']['List']
+
+  list.each do |product|
+    product_object = Product.new
+    product_object.name = product['Name']
+    product_object.description = product['Description']
+    product_object.retail_price = product['PriceRetail']
+    product_object.year = product['Year']
+    product_object.varietal = product['Varietal']['Name'] if product['Varietal']
+    product_object.vineyard = product['Vineyard']['Name'] if product['Vineyard']
+    product_object.save
+  end
+  offset += 100
+end
