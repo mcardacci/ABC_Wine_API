@@ -12,8 +12,7 @@ offset = 0
     product_object.name = product['Name']
     product_object.description = product['Description']
     product_object.retail_price = product['PriceRetail']
-    product_object.year = product['Year']
-    product_object.varietal = product['Varietal']['Name'] if product['Varietal']
+    product_object.rating = product['Ratings']['HighestScore']
     product_object.vineyard = product['Vineyard']['Name'] if product['Vineyard']
     product_object.save
   end
