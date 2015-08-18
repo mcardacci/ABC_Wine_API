@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 20150818171059) do
     t.string   "name",                                 null: false
     t.text     "description"
     t.decimal  "retail_price", precision: 8, scale: 2
-    t.string   "year"
-    t.string   "varietal"
+    t.integer  "rating"
     t.string   "vineyard"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
