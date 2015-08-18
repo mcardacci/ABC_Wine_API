@@ -4,8 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name, null: false
       t.text :description
       t.decimal :retail_price, :precision => 8, :scale => 2
-      t.string :year
-      t.string :varietal
+      t.integer :rating
       t.string :vineyard
 
       t.timestamps null: false
