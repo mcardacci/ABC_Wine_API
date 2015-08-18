@@ -15,6 +15,7 @@
 					<td><%= wine.retail_price || "Not Listed" %></td>
 					<td><%= wine.vineyard || "Not Listed" %></td>
 					<td><%= wine.rating %></td>
+					<td><%= link_to "Edit Product", edit_product_path(wine), :class => "btn btn-primary" %></td>
 				</tr>
 			<% end %>
 		</thead>
