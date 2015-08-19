@@ -1,23 +1,23 @@
 <div class="container">
-	<h1>Wine Management System</h1>
+  <h1>Wine Management System</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-					<th>Name</th>
-					<th>Retail Price</th>
-					<th>Vineyard</th>
-					<th>Rating</td>
-			</tr>
-			<% @products.each do |wine| %>	
-				<tr>
-					<td><%= wine.name || "Not Listed" %></td>
-					<td><%= wine.retail_price || "Not Listed" %></td>
-					<td><%= wine.vineyard || "Not Listed" %></td>
-					<td><%= wine.rating %></td>
-					<td><%= link_to "Edit Product", edit_product_path(wine), :class => "btn btn-primary" %></td>
-				</tr>
-			<% end %>
-		</thead>
-	</table>
+  <table class="table">
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Retail Price</th>
+          <th>Vineyard</th>
+          <th>Rating</td>
+      </tr>
+      <% @products.each do |wine| %>  
+        <tr>
+          <td><%= wine.name || "Not Listed" %></td>
+          <td><%= wine.retail_price || "Not Listed" %></td>
+          <td><%= wine.vineyard || "Not Listed" %></td>
+          <td><%= wine.rating %></td>
+          <td><%= link_to "Edit Product", edit_product_path(wine), :class => "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </thead>
+  </table>
 </div>
