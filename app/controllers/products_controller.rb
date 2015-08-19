@@ -1,20 +1,35 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
+    # Post.page(params[:page])
   end
 
   def edit
-    @product = Product.new
+    @product = Product.find_by(id: params[:id])
     @current_product = Product.find_by(id: params["id"])
   end
 
+  def update
+    @product = Product.find_by(id: params[:id])
+    if @product.update(product_params)
+      redirect_to root_path
+    else
+      redirect_to :back
+    end
+  end
+
   def create
-    this is a tab test
+    @product = Product.new(product_params)
+    if @product.save
+      redirect_to root_path
+    else
+      redirect_to :back
+    end
   end
 
   private
 
   def product_params
-    params.require(:product).permit(:name)
+    params.require(:product).permit(:name, :description, :retail_price, :rating, :vineyard)
   end
 end
