@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'will_paginate', '~> 3.0.6'
 gem 'rest-client'
 gem 'bootstrap-sass'
 group :development, :test do
