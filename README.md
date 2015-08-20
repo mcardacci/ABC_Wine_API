@@ -1,7 +1,7 @@
 # To run the application: 
-1.Clone it from this repository
-1.The database is in postgres so make sure you download it (here)[http://www.postgresql.org/]
-1.In your terminal run:
+1. Clone it from this repository
+1. The database is in postgres so make sure you download it (here)[http://www.postgresql.org/]
+1. In your terminal run:
 ```
 $ bundle exec rake db:create
 $ bundle exec rake db:migrate
