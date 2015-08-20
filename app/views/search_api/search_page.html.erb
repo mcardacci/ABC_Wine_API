@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Wine Management System</h1>
+  <%= form_tag(search_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+    <%= submit_tag "Search" %>
+  <% end %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Retail Price</th>
+        <th>Vineyard</th>
+        <th>Rating</td>
+      </tr>
+      <% if params[:search].to_s.length > 1 %>
+        <%= render :partial => 'products/results' %>
+      <% else %>
+        <div>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+    </thead>
+  </table>
+  <div>
+    <%= link_to "Create New Product", new_product_path %>
+  </div>
+</div>

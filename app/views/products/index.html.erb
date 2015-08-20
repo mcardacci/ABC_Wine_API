@@ -1,23 +1,18 @@
 <div class="container">
   <h1>Wine Management System</h1>
-
+  <%= form_tag(search_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+    <%= submit_tag "Search" %>
+  <% end %>
   <table class="table">
     <thead>
       <tr>
-          <th>Name</th>
-          <th>Retail Price</th>
-          <th>Vineyard</th>
-          <th>Rating</td>
+        <th>Name</th>
+        <th>Retail Price</th>
+        <th>Vineyard</th>
+        <th>Rating</td>
       </tr>
-      <% @products.each do |wine| %>  
-        <tr>
-          <td><%= wine.name || "Not Listed" %></td>
-          <td><%= wine.retail_price || "Not Listed" %></td>
-          <td><%= wine.vineyard || "Not Listed" %></td>
-          <td><%= wine.rating %></td>
-          <td><%= link_to "Edit Product", edit_product_path(wine), :class => "btn btn-primary" %></td>
-        </tr>
-      <% end %>
+      <%= render 'results' %>
     </thead>
   </table>
   <div>

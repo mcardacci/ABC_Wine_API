@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
 
 	root 'products#index'
-
 	resources :products
+	# get '/search' => 'search_api#search_page', as: :search
+	scope '/api' do
+		scope '/beta' do
+			scope '/JSON' do
+				get '/' => 'search_api#search_page', as: :search
+				scope '/:id' do
+				put '/' => 'search_api#update' 
+					scope '/apikey=' do
+					end
+				end
+			end
+		end
+	end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
