@@ -8,7 +8,7 @@ class SearchApiController < ApplicationController
       flash[:notice] = "There are no products that matched your search."
     end   
   end
-  
+
   def update
     @current_product = Product.find_by(id: params[:id])
     @current_product.update(params)

@@ -1,0 +1,640 @@
+  [1m[36m (259.3ms)[0m  [1mDROP DATABASE IF EXISTS "management_system_test"[0m
+  [1m[35m (1276.7ms)[0m  CREATE DATABASE "management_system_test" ENCODING = 'unicode'
+  [1m[36mSQL (38.0ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (66.9ms)[0m  CREATE TABLE "products" ("id" serial primary key, "name" character varying NOT NULL, "description" text, "retail_price" decimal(8,2), "rating" integer, "vineyard" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (45.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150818171059')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (38.7ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "gaetano"], ["description", "Ipsa delectus impedit ad ex voluptates inventore mollitia."], ["retail_price", "32.46"], ["rating", 55], ["vineyard", "Sanford"], ["created_at", "2015-08-20 02:41:11.725033"], ["updated_at", "2015-08-20 02:41:11.725033"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "candice.weimann"], ["description", "Tempore facere fuga laborum officia rerum consequuntur architecto."], ["retail_price", "12.62"], ["rating", 50], ["vineyard", "Oberbrunner"], ["created_at", "2015-08-20 02:42:03.827026"], ["updated_at", "2015-08-20 02:42:03.827026"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "sarai"], ["description", "Eum et nostrum ut aut non."], ["retail_price", "90.5"], ["rating", 10], ["vineyard", "Larkin"], ["created_at", "2015-08-20 02:43:30.632270"], ["updated_at", "2015-08-20 02:43:30.632270"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "prince"], ["description", "Qui non excepturi consectetur."], ["retail_price", "74.82"], ["rating", 24], ["vineyard", "Smitham"], ["created_at", "2015-08-20 02:45:46.353053"], ["updated_at", "2015-08-20 02:45:46.353053"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "wellington"], ["description", "Quod nam sint officiis et impedit."], ["retail_price", "50.9"], ["rating", 87], ["vineyard", "Ruecker"], ["created_at", "2015-08-20 02:46:28.395294"], ["updated_at", "2015-08-20 02:46:28.395294"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (16.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "rachel.donnelly"], ["description", "Enim repudiandae voluptate iste."], ["retail_price", "53.4"], ["rating", 68], ["vineyard", "Wolf"], ["created_at", "2015-08-20 02:46:59.690757"], ["updated_at", "2015-08-20 02:46:59.690757"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (23.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "modesta.green"], ["description", "Voluptatem eos rem nisi dolor."], ["retail_price", "61.18"], ["rating", 23], ["vineyard", "Gerhold"], ["created_at", "2015-08-20 02:50:08.798740"], ["updated_at", "2015-08-20 02:50:08.798740"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "harry_kihn"], ["description", "Quas sint labore quod recusandae sequi in qui."], ["retail_price", "21.76"], ["rating", 42], ["vineyard", "Wolff"], ["created_at", "2015-08-20 02:50:27.680805"], ["updated_at", "2015-08-20 02:50:27.680805"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (22.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "davin"], ["description", "Et qui architecto iusto numquam nulla officia ullam."], ["retail_price", "73.47"], ["rating", 17], ["vineyard", "Oberbrunner"], ["created_at", "2015-08-20 02:51:01.332633"], ["updated_at", "2015-08-20 02:51:01.332633"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=davin" for 127.0.0.1 at 2015-08-19 22:51:01 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"davin"}
+  [1m[35mProduct Load (51.6ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%davin%')  ORDER BY created_at DESC
+Completed 200 OK in 55ms (Views: 2.8ms | ActiveRecord: 51.6ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "carolyn.fadel"], ["description", "Quod ut et eum hic aut nemo."], ["retail_price", "47.33"], ["rating", 62], ["vineyard", "Waters"], ["created_at", "2015-08-20 02:51:47.981551"], ["updated_at", "2015-08-20 02:51:47.981551"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=carolyn.fadel" for 127.0.0.1 at 2015-08-19 22:51:48 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"carolyn.fadel"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%carolyn.fadel%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "lillie.baumbach"], ["description", "Alias ex consequatur distinctio fuga."], ["retail_price", "76.53"], ["rating", 53], ["vineyard", "Legros"], ["created_at", "2015-08-20 02:53:43.199150"], ["updated_at", "2015-08-20 02:53:43.199150"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=lillie.baumbach" for 127.0.0.1 at 2015-08-19 22:53:43 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"lillie.baumbach"}
+  [1m[35mProduct Load (2.4ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%lillie.baumbach%')  ORDER BY created_at DESC
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "hannah_anderson"], ["description", "Beatae earum blanditiis quibusdam reiciendis eius modi aut iusto."], ["retail_price", "31.62"], ["rating", 81], ["vineyard", "Kessler"], ["created_at", "2015-08-20 02:54:08.470570"], ["updated_at", "2015-08-20 02:54:08.470570"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=hannah_anderson" for 127.0.0.1 at 2015-08-19 22:54:08 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"hannah_anderson"}
+  [1m[35mProduct Load (2.3ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%hannah_anderson%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "lois"], ["description", "Aperiam occaecati dolor ipsa."], ["retail_price", "38.54"], ["rating", 34], ["vineyard", "Graham"], ["created_at", "2015-08-20 02:54:24.406805"], ["updated_at", "2015-08-20 02:54:24.406805"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=lois" for 127.0.0.1 at 2015-08-19 22:54:24 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"lois"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%lois%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (10.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "braulio.torphy"], ["description", "Cum vel repellendus architecto est aperiam."], ["retail_price", "43.64"], ["rating", 47], ["vineyard", "Stiedemann"], ["created_at", "2015-08-20 03:05:42.776364"], ["updated_at", "2015-08-20 03:05:42.776364"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=braulio.torphy" for 127.0.0.1 at 2015-08-19 23:05:42 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"braulio.torphy"}
+  [1m[35mProduct Load (2.4ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%braulio.torphy%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "jesus"], ["description", "Sint facilis libero quia vel tempora et veritatis suscipit."], ["retail_price", "60.62"], ["rating", 38], ["vineyard", "Block"], ["created_at", "2015-08-20 03:05:42.914392"], ["updated_at", "2015-08-20 03:05:42.914392"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "matilda"], ["description", "Qui velit velit officia accusantium ut in."], ["retail_price", "71.79"], ["rating", 79], ["vineyard", "Gislason"], ["created_at", "2015-08-20 03:06:50.592542"], ["updated_at", "2015-08-20 03:06:50.592542"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=matilda" for 127.0.0.1 at 2015-08-19 23:06:50 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"matilda"}
+  [1m[35mProduct Load (1.8ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%matilda%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.8ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "sarina.price"], ["description", "Aperiam fuga accusantium commodi deleniti consequatur."], ["retail_price", "40.4"], ["rating", 16], ["vineyard", "Quigley"], ["created_at", "2015-08-20 03:06:50.737413"], ["updated_at", "2015-08-20 03:06:50.737413"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (22.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "rod.lynch"], ["description", "Commodi quibusdam non vel quidem quaerat recusandae reprehenderit velit."], ["retail_price", "18.53"], ["rating", 87], ["vineyard", "Kihn"], ["created_at", "2015-08-20 03:07:40.235519"], ["updated_at", "2015-08-20 03:07:40.235519"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=rod.lynch" for 127.0.0.1 at 2015-08-19 23:07:40 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"rod.lynch"}
+  [1m[35mProduct Load (2.3ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%rod.lynch%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "andreanne"], ["description", "Aliquid sint error natus ut."], ["retail_price", "37.98"], ["rating", 5], ["vineyard", "Von"], ["created_at", "2015-08-20 03:07:40.415367"], ["updated_at", "2015-08-20 03:07:40.415367"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (10.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "iac.rau"], ["description", "Recusandae rerum nemo voluptas et unde fuga optio eum."], ["retail_price", "13.42"], ["rating", 18], ["vineyard", "Mraz"], ["created_at", "2015-08-20 03:09:47.542917"], ["updated_at", "2015-08-20 03:09:47.542917"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=iac.rau" for 127.0.0.1 at 2015-08-19 23:09:47 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"iac.rau"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%iac.rau%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "ricardo.johnson"], ["description", "Quis deleniti sunt nostrum rem mollitia totam voluptas molestias."], ["retail_price", "52.33"], ["rating", 72], ["vineyard", "Ullrich"], ["created_at", "2015-08-20 03:09:47.686959"], ["updated_at", "2015-08-20 03:09:47.686959"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "elwyn_murray"], ["description", "Voluptas fuga ut soluta perferendis laudantium velit tenetur."], ["retail_price", "28.25"], ["rating", 15], ["vineyard", "Luettgen"], ["created_at", "2015-08-20 03:10:12.970438"], ["updated_at", "2015-08-20 03:10:12.970438"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=elwyn_murray" for 127.0.0.1 at 2015-08-19 23:10:13 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"elwyn_murray"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%elwyn_murray%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "gillian"], ["description", "Velit quasi iure ut hic blanditiis possimus."], ["retail_price", "16.83"], ["rating", 76], ["vineyard", "Doyle"], ["created_at", "2015-08-20 03:10:13.091439"], ["updated_at", "2015-08-20 03:10:13.091439"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (22.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "mae"], ["description", "Consequatur consequuntur facilis qui et magnam."], ["retail_price", "53.94"], ["rating", 78], ["vineyard", "Lakin"], ["created_at", "2015-08-20 03:10:52.321130"], ["updated_at", "2015-08-20 03:10:52.321130"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=mae" for 127.0.0.1 at 2015-08-19 23:10:52 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"mae"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%mae%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "pietro_corwin"], ["description", "Sed omnis doloribus ut ut ratione molestiae."], ["retail_price", "77.2"], ["rating", 55], ["vineyard", "Steuber"], ["created_at", "2015-08-20 03:10:52.490149"], ["updated_at", "2015-08-20 03:10:52.490149"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (22.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "jalon.jacobson"], ["description", "Minus voluptatem quasi blanditiis quo facere."], ["retail_price", "77.11"], ["rating", 63], ["vineyard", "Beer"], ["created_at", "2015-08-20 03:13:49.404200"], ["updated_at", "2015-08-20 03:13:49.404200"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=jalon.jacobson" for 127.0.0.1 at 2015-08-19 23:13:49 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"jalon.jacobson"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%jalon.jacobson%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "verona_mante"], ["description", "Aut necessitatibus nulla eum atque fugiat."], ["retail_price", "95.56"], ["rating", 45], ["vineyard", "Legros"], ["created_at", "2015-08-20 03:13:49.583521"], ["updated_at", "2015-08-20 03:13:49.583521"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (11.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "blaise"], ["description", "Occaecati illum et aliquid et."], ["retail_price", "98.29"], ["rating", 66], ["vineyard", "Yost"], ["created_at", "2015-08-20 03:15:36.552757"], ["updated_at", "2015-08-20 03:15:36.552757"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=blaise" for 127.0.0.1 at 2015-08-19 23:15:36 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"blaise"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%blaise%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "ursula"], ["description", "Ut quis similique animi officiis sed."], ["retail_price", "87.31"], ["rating", 21], ["vineyard", "Bashirian"], ["created_at", "2015-08-20 03:15:36.695880"], ["updated_at", "2015-08-20 03:15:36.695880"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "delta.schuppe"], ["description", "In ut aliquam sit sit."], ["retail_price", "57.55"], ["rating", 86], ["vineyard", "Veum"], ["created_at", "2015-08-20 03:16:19.636955"], ["updated_at", "2015-08-20 03:16:19.636955"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=delta.schuppe" for 127.0.0.1 at 2015-08-19 23:16:19 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"delta.schuppe"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%delta.schuppe%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "kallie"], ["description", "Omnis quisquam vel repellendus qui qui optio."], ["retail_price", "52.64"], ["rating", 74], ["vineyard", "Cronin"], ["created_at", "2015-08-20 03:16:19.793834"], ["updated_at", "2015-08-20 03:16:19.793834"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (22.9ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "tamia"], ["description", "Ad est aut temporibus."], ["retail_price", "93.38"], ["rating", 28], ["vineyard", "Spencer"], ["created_at", "2015-08-20 03:19:07.830691"], ["updated_at", "2015-08-20 03:19:07.830691"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=tamia" for 127.0.0.1 at 2015-08-19 23:19:07 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"tamia"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%tamia%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "first wine"], ["created_at", "2015-08-20 03:19:08.013773"], ["updated_at", "2015-08-20 03:19:08.013773"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "zander"], ["description", "Nulla maxime beatae est ipsa aut illum."], ["retail_price", "27.97"], ["rating", 26], ["vineyard", "Veum"], ["created_at", "2015-08-20 03:19:34.746194"], ["updated_at", "2015-08-20 03:19:34.746194"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=zander" for 127.0.0.1 at 2015-08-19 23:19:34 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"zander"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%zander%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "first wine"], ["created_at", "2015-08-20 03:19:34.879910"], ["updated_at", "2015-08-20 03:19:34.879910"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (33.3ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "santina.goyette"], ["description", "Architecto dolore sit non odit corporis at autem."], ["retail_price", "72.38"], ["rating", 41], ["vineyard", "Wolff"], ["created_at", "2015-08-20 03:22:21.360060"], ["updated_at", "2015-08-20 03:22:21.360060"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=santina.goyette" for 127.0.0.1 at 2015-08-19 23:22:21 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"santina.goyette"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%santina.goyette%')  ORDER BY created_at DESC
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "justina"], ["description", "Voluptatem voluptatem aspernatur facilis adipisci."], ["retail_price", "1.09"], ["rating", 76], ["vineyard", "Medhurst"], ["created_at", "2015-08-20 03:22:21.539028"], ["updated_at", "2015-08-20 03:22:21.539028"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (11.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "reagan"], ["description", "Consequatur expedita assumenda quasi totam alias mollitia perspiciatis nam."], ["retail_price", "43.33"], ["rating", 71], ["vineyard", "Reinger"], ["created_at", "2015-08-20 03:25:00.250158"], ["updated_at", "2015-08-20 03:25:00.250158"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=reagan" for 127.0.0.1 at 2015-08-19 23:25:00 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"reagan"}
+  [1m[35mProduct Load (2.3ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%reagan%')  ORDER BY created_at DESC
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "clara.marks"], ["description", "Possimus saepe non rerum et ipsam consequatur."], ["retail_price", "23.13"], ["rating", 60], ["vineyard", "Wiza"], ["created_at", "2015-08-20 03:25:00.409883"], ["updated_at", "2015-08-20 03:25:00.409883"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "ella"], ["description", "Eos aliquam impedit ut incidunt."], ["retail_price", "70.24"], ["rating", 54], ["vineyard", "Schiller"], ["created_at", "2015-08-20 03:26:31.492245"], ["updated_at", "2015-08-20 03:26:31.492245"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=ella" for 127.0.0.1 at 2015-08-19 23:26:31 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"ella"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%ella%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "shakira"], ["description", "Voluptates molestias consequatur rerum aut commodi consequatur nihil sed."], ["retail_price", "81.68"], ["rating", 1], ["vineyard", "Kub"], ["created_at", "2015-08-20 03:26:31.615889"], ["updated_at", "2015-08-20 03:26:31.615889"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "brandy"], ["description", "Reprehenderit et et minus et."], ["retail_price", "41.44"], ["rating", 31], ["vineyard", "Feil"], ["created_at", "2015-08-20 03:27:44.918794"], ["updated_at", "2015-08-20 03:27:44.918794"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=brandy" for 127.0.0.1 at 2015-08-19 23:27:44 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"brandy"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%brandy%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "meggie_baumbach"], ["description", "Nobis et consequatur dolores necessitatibus voluptate enim soluta possimus."], ["retail_price", "32.54"], ["rating", 26], ["vineyard", "Turner"], ["created_at", "2015-08-20 03:27:45.044753"], ["updated_at", "2015-08-20 03:27:45.044753"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (26.3ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "willow"], ["description", "Laboriosam temporibus molestias vel quia ipsum."], ["retail_price", "18.76"], ["rating", 51], ["vineyard", "Mohr"], ["created_at", "2015-08-20 03:29:30.254204"], ["updated_at", "2015-08-20 03:29:30.254204"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=willow" for 127.0.0.1 at 2015-08-19 23:29:30 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"willow"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%willow%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "lester"], ["description", "Deserunt minus eius numquam officiis accusamus."], ["retail_price", "98.53"], ["rating", 33], ["vineyard", "Willms"], ["created_at", "2015-08-20 03:29:30.379507"], ["updated_at", "2015-08-20 03:29:30.379507"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (18.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "melvina_huels"], ["description", "Illo at autem ut."], ["retail_price", "81.88"], ["rating", 52], ["vineyard", "Schultz"], ["created_at", "2015-08-20 03:30:20.196851"], ["updated_at", "2015-08-20 03:30:20.196851"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=melvina_huels" for 127.0.0.1 at 2015-08-19 23:30:20 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"melvina_huels"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%melvina_huels%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "telly.schmeler"], ["description", "Hic commodi rem quia amet cumque molestiae id aut."], ["retail_price", "28.1"], ["rating", 18], ["vineyard", "O'Connell"], ["created_at", "2015-08-20 03:30:20.330615"], ["updated_at", "2015-08-20 03:30:20.330615"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "monroe"], ["description", "Sit voluptate expedita sapiente voluptatem minima."], ["retail_price", "93.14"], ["rating", 44], ["vineyard", "Bauch"], ["created_at", "2015-08-20 03:33:13.621063"], ["updated_at", "2015-08-20 03:33:13.621063"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=monroe" for 127.0.0.1 at 2015-08-19 23:33:13 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"monroe"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%monroe%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 2.2ms)
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "leanna_hermann"], ["description", "Esse blanditiis itaque asperiores nemo."], ["retail_price", "4.78"], ["rating", 68], ["vineyard", "Daugherty"], ["created_at", "2015-08-20 03:33:13.715680"], ["updated_at", "2015-08-20 03:33:13.715680"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (10.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "floyd"], ["description", "Et repellat commodi officiis quis ex magnam dolores repellendus."], ["retail_price", "16.1"], ["rating", 75], ["vineyard", "Hermann"], ["created_at", "2015-08-20 03:35:20.906441"], ["updated_at", "2015-08-20 03:35:20.906441"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=floyd" for 127.0.0.1 at 2015-08-19 23:35:20 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"floyd"}
+  [1m[35mProduct Load (2.4ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%floyd%')  ORDER BY created_at DESC
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "aubrey"], ["description", "Voluptatum aliquid sint magnam."], ["retail_price", "98.74"], ["rating", 12], ["vineyard", "Weissnat"], ["created_at", "2015-08-20 03:35:21.019605"], ["updated_at", "2015-08-20 03:35:21.019605"]]
+  [1m[36m (1.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "elda_wilderman"], ["description", "Tempore asperiores nobis odit aut numquam qui dolor aliquid."], ["retail_price", "54.31"], ["rating", 13], ["vineyard", "Corkery"], ["created_at", "2015-08-20 03:38:52.830727"], ["updated_at", "2015-08-20 03:38:52.830727"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=elda_wilderman" for 127.0.0.1 at 2015-08-19 23:38:52 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"elda_wilderman"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%elda_wilderman%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "pearl_fadel"], ["description", "Expedita nemo vitae qui ullam eos."], ["retail_price", "64.75"], ["rating", 37], ["vineyard", "Nienow"], ["created_at", "2015-08-20 03:38:52.956814"], ["updated_at", "2015-08-20 03:38:52.956814"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "wiley.haley"], ["description", "Maiores consequatur id quas."], ["retail_price", "33.01"], ["rating", 36], ["vineyard", "Fritsch"], ["created_at", "2015-08-20 03:39:43.968124"], ["updated_at", "2015-08-20 03:39:43.968124"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=wiley.haley" for 127.0.0.1 at 2015-08-19 23:39:44 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"wiley.haley"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%wiley.haley%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "marvin.shanahan"], ["description", "Omnis ex soluta sit officia."], ["retail_price", "33.32"], ["rating", 13], ["vineyard", "Gislason"], ["created_at", "2015-08-20 03:39:44.056973"], ["updated_at", "2015-08-20 03:39:44.056973"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (15.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "mayra.schulist"], ["description", "Cum ut vitae corporis hic."], ["retail_price", "33.69"], ["rating", 64], ["vineyard", "Kutch"], ["created_at", "2015-08-20 03:40:33.709068"], ["updated_at", "2015-08-20 03:40:33.709068"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=mayra.schulist" for 127.0.0.1 at 2015-08-19 23:40:33 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"mayra.schulist"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%mayra.schulist%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "forest"], ["description", "Accusamus velit quaerat libero incidunt commodi eos."], ["retail_price", "66.28"], ["rating", 54], ["vineyard", "Paucek"], ["created_at", "2015-08-20 03:40:33.834171"], ["updated_at", "2015-08-20 03:40:33.834171"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "hans"], ["description", "Architecto modi reprehenderit ab."], ["retail_price", "87.5"], ["rating", 23], ["vineyard", "Rolfson"], ["created_at", "2015-08-20 03:41:26.841700"], ["updated_at", "2015-08-20 03:41:26.841700"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=hans" for 127.0.0.1 at 2015-08-19 23:41:26 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"hans"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%hans%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "rosario"], ["description", "Quidem ut et tempore."], ["retail_price", "99.68"], ["rating", 96], ["vineyard", "Kuhlman"], ["created_at", "2015-08-20 03:41:26.946265"], ["updated_at", "2015-08-20 03:41:26.946265"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "rene"], ["description", "Perferendis quaerat aut totam."], ["retail_price", "47.48"], ["rating", 62], ["vineyard", "Mitchell"], ["created_at", "2015-08-20 03:42:11.685624"], ["updated_at", "2015-08-20 03:42:11.685624"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=rene" for 127.0.0.1 at 2015-08-19 23:42:11 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"rene"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%rene%')  ORDER BY created_at DESC
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "jayme"], ["description", "In ut earum sequi sunt unde sed."], ["retail_price", "87.84"], ["rating", 11], ["vineyard", "Langworth"], ["created_at", "2015-08-20 03:42:11.786336"], ["updated_at", "2015-08-20 03:42:11.786336"]]
+  [1m[36m (1.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "christop_brown"], ["description", "Voluptatem voluptatem odit assumenda explicabo exercitationem necessitatibus et."], ["retail_price", "71.45"], ["rating", 60], ["vineyard", "Kuphal"], ["created_at", "2015-08-20 03:43:52.640313"], ["updated_at", "2015-08-20 03:43:52.640313"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=christop_brown" for 127.0.0.1 at 2015-08-19 23:43:52 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"christop_brown"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%christop_brown%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "samson_predovic"], ["description", "Sequi cum in laborum."], ["retail_price", "74.6"], ["rating", 20], ["vineyard", "Kautzer"], ["created_at", "2015-08-20 03:43:52.752706"], ["updated_at", "2015-08-20 03:43:52.752706"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "asia"], ["description", "Velit consequatur autem qui tempore."], ["retail_price", "44.75"], ["rating", 14], ["vineyard", "Quitzon"], ["created_at", "2015-08-20 03:46:17.037698"], ["updated_at", "2015-08-20 03:46:17.037698"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=asia" for 127.0.0.1 at 2015-08-19 23:46:17 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"asia"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%asia%')  ORDER BY created_at DESC
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "green"], ["description", "Temporibus ad voluptate nihil qui laudantium et qui sunt."], ["retail_price", "2.02"], ["rating", 11], ["vineyard", "Kulas"], ["created_at", "2015-08-20 03:46:17.172746"], ["updated_at", "2015-08-20 03:46:17.172746"]]
+  [1m[36m (1.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "gordon"], ["description", "Omnis expedita voluptatem ratione magnam neque."], ["retail_price", "33.56"], ["rating", 23], ["vineyard", "Bauch"], ["created_at", "2015-08-20 03:47:13.562137"], ["updated_at", "2015-08-20 03:47:13.562137"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=gordon" for 127.0.0.1 at 2015-08-19 23:47:13 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"gordon"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%gordon%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "vern"], ["description", "Deleniti quo qui voluptas velit ut autem sit sit."], ["retail_price", "76.81"], ["rating", 72], ["vineyard", "Jacobson"], ["created_at", "2015-08-20 03:47:13.676577"], ["updated_at", "2015-08-20 03:47:13.676577"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "gabriella_lindgren"], ["description", "Sed eos voluptatem ut pariatur beatae odit repudiandae at."], ["retail_price", "17.38"], ["rating", 89], ["vineyard", "Denesik"], ["created_at", "2015-08-20 03:47:46.912680"], ["updated_at", "2015-08-20 03:47:46.912680"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=gabriella_lindgren" for 127.0.0.1 at 2015-08-19 23:47:46 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"gabriella_lindgren"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%gabriella_lindgren%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.1ms)
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "rogers"], ["description", "Et porro aperiam corporis vitae sit."], ["retail_price", "17.48"], ["rating", 76], ["vineyard", "Reynolds"], ["created_at", "2015-08-20 03:47:46.992392"], ["updated_at", "2015-08-20 03:47:46.992392"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "conner"], ["description", "Tempore placeat facilis eos."], ["retail_price", "49.55"], ["rating", 0], ["vineyard", "Heller"], ["created_at", "2015-08-20 03:48:07.518754"], ["updated_at", "2015-08-20 03:48:07.518754"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=conner" for 127.0.0.1 at 2015-08-19 23:48:07 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"conner"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%conner%')  ORDER BY created_at DESC
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "jeff_roberts"], ["description", "Eligendi molestias eum aliquid aut harum nostrum excepturi et."], ["retail_price", "83.54"], ["rating", 2], ["vineyard", "Friesen"], ["created_at", "2015-08-20 03:48:07.632608"], ["updated_at", "2015-08-20 03:48:07.632608"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "gavin_paucek"], ["description", "Voluptatem illo eos sed."], ["retail_price", "38.71"], ["rating", 3], ["vineyard", "Adams"], ["created_at", "2015-08-20 03:48:33.600413"], ["updated_at", "2015-08-20 03:48:33.600413"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=gavin_paucek" for 127.0.0.1 at 2015-08-19 23:48:33 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"gavin_paucek"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%gavin_paucek%')  ORDER BY created_at DESC
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "lavina.cremin"], ["description", "Occaecati sapiente rem officiis non."], ["retail_price", "35.69"], ["rating", 98], ["vineyard", "Schmeler"], ["created_at", "2015-08-20 03:48:33.713830"], ["updated_at", "2015-08-20 03:48:33.713830"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "eula_reichert"], ["description", "Saepe voluptatem adipisci est et qui."], ["retail_price", "57.13"], ["rating", 87], ["vineyard", "Orn"], ["created_at", "2015-08-20 03:49:27.245467"], ["updated_at", "2015-08-20 03:49:27.245467"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=eula_reichert" for 127.0.0.1 at 2015-08-19 23:49:27 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"eula_reichert"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%eula_reichert%')  ORDER BY created_at DESC
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "katlyn"], ["description", "Velit voluptas autem recusandae."], ["retail_price", "38.89"], ["rating", 77], ["vineyard", "Emard"], ["created_at", "2015-08-20 03:49:27.358287"], ["updated_at", "2015-08-20 03:49:27.358287"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "rubye.glover"], ["description", "Necessitatibus ipsa quasi laudantium."], ["retail_price", "90.49"], ["rating", 23], ["vineyard", "Kris"], ["created_at", "2015-08-20 03:50:58.593371"], ["updated_at", "2015-08-20 03:50:58.593371"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=rubye.glover" for 127.0.0.1 at 2015-08-19 23:50:58 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"rubye.glover"}
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%rubye.glover%')  ORDER BY created_at DESC
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "johnathan_pfeffer"], ["description", "Quia aut et voluptatem eos incidunt eos."], ["retail_price", "85.19"], ["rating", 58], ["vineyard", "Rodriguez"], ["created_at", "2015-08-20 03:50:58.679881"], ["updated_at", "2015-08-20 03:50:58.679881"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "louisa"], ["description", "Dolorem ut enim numquam eum totam."], ["retail_price", "31.32"], ["rating", 88], ["vineyard", "O'Reilly"], ["created_at", "2015-08-20 03:52:33.486194"], ["updated_at", "2015-08-20 03:52:33.486194"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/beta/JSON?search=louisa" for 127.0.0.1 at 2015-08-19 23:52:33 -0400
+Processing by SearchApiController#search_page as HTML
+  Parameters: {"search"=>"louisa"}
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products" WHERE (name LIKE '%louisa%')  ORDER BY created_at DESC
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "products" ("name", "description", "retail_price", "rating", "vineyard", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "noemie"], ["description", "Culpa amet laborum mollitia quos autem."], ["retail_price", "21.96"], ["rating", 87], ["vineyard", "Zboncak"], ["created_at", "2015-08-20 03:52:33.651891"], ["updated_at", "2015-08-20 03:52:33.651891"]]
+  [1m[36m (1.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
