@@ -9,7 +9,6 @@ Rails.application.routes.draw do
         get '/' => 'search_api#search_page', as: :search
         scope '/:id' do
         put '/' => 'search_api#update' 
-          # scope '/apikey=' do
           end
         end
       end
