@@ -14,4 +14,4 @@ $ bundle exec rake db:seed
 ```
 $ bundle exec rails s
 ```
-1. Head over into your browser and type localhost:3000 into the URL and enjoy.
+3. Head over into your browser and type localhost:3000 into the URL and enjoy.
